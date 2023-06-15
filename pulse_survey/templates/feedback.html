@@ -6,17 +6,21 @@
 <div>
   <form method="post">{{csrf_input}}
     <fieldset>
+    <div class="feedback-content">
       <p>This feedback will not be linked to your other responses.</p>
       <p>You may optionally enter your email if you wish to be contacted about your feedback.</p>
+    </div>
       {% for error in form.email.errors %}
         <p class="help-block">{{ error }}</p>
       {% endfor %}
-      <label class="label">Email: </label>
-      <input type="text" name="email">
-      <br>
-      <label class="label">Feedback: </label>
-      <textarea rows="4" name="content"></textarea>
-      <br> 
+      <div class="input-pair">
+        <label class="label">Email: </label>
+        <input type="text" name="email">
+      </div>
+      <div class="input-pair">
+        <label class="label">Feedback: </label>
+        <textarea rows="4" name="content"></textarea>
+      </div>
       <input type="submit" value="Submit feedback" name="next">
     </fieldset>
   </form>

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <head></head>
+    <head>
+      <link rel="stylesheet" href="{{ static('styles.css') }}">
+    </head>
+    <div class="content">
       {% block content %}
       {% endblock %}
+    </div>
     <footer></footer>
   </body>
 </html>
