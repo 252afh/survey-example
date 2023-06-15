@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 
 
 def is_cabinet_office_email(email_address):
-    # TODO - update to raise a ValidationError for non-Cabinet Office emails
+    # TODO - Add more robust validation to the solution here
     return True
     
 
