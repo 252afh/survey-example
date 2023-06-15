@@ -8,7 +8,7 @@ from pulse_survey.survey.forms import FeedbackForm
 from pulse_survey.survey.models import Result, Feedback
 
 
-WELLBEING_RESPONSES = {"Agree", "Strongly agree", "Disagree", "Strongly disagree", "Neither agree nor disagree"}
+WELLBEING_RESPONSES = ["Strongly agree", "Agree", "Neither agree nor disagree", "Disagree", "Strongly disagree"]
 
 
 def index(request):
@@ -47,7 +47,6 @@ def location_view(request, session_id):
         result.save()
         return redirect(reverse("wellbeing-q1", args=(session_id,)))
     return render(request, "location_question.html", {"errors": errors, "locations": locations, "chosen_location": chosen_location})
-
 
 
 def wellbeing_q1_view(request, session_id):
