@@ -1,5 +1,4 @@
 from django import forms
-from django.core.exceptions import ValidationError
 
 
 def is_cabinet_office_email(email_address):
