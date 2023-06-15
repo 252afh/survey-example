@@ -90,6 +90,5 @@ class FeedbackView(FormView):
     
 
 def end_view(request):
-
     return render(request, "end.html")
 
