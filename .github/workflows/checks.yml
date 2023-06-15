@@ -22,3 +22,9 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip setuptools
         pip install -r requirements.lock
+
+     - name: Run Python Code Checks
+      run: |
+        isort --check .
+        black --check .
+        flake8
